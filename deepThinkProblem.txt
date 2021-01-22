@@ -1,0 +1,41 @@
+一  vue 启动项目的原理
+
+二  mvvm
+   v-view - UI
+   m - model - 数据模型
+      1 数据结构包括 data vuex 
+	1-1 vue 如何合并数据结构的
+   vm - viewModel - 转换model为view 转换view为model
+   问题1 虚拟DOM
+   问题2 双向数据绑定原理 - 进行中
+  	 问题1  原型 原型对象 - 进行中
+		问题1 函数的默认返回值  函数的prototype指向函数返回的对象
+		问题2 object.create和直接定义一个对象的区别
+		问题3 object.create的使用方法
+			1 参数一 新创建对象的原型对象
+			2 参数二 新创建的对象初始化属性是个对象（形式是key和value的形式， value是个对象，对象内容是什么？）
+				1 value 的对象和Object.defineProperty(obj, prop, descriptor)中的descriptor是一样的， descriptor中的值是什么？
+					问题：descriptor中的值是什么？
+						1 configurable： 当且仅当该属性的 configurable 键值为 true 时，该属性的描述符才能够被改变，同时该属性也能从对应的对象上被删除
+							默认： false (主要定义该属性能否被删除）
+						2 enumerable: 当且仅当该属性的 enumerable 键值为 true 时，该属性才会出现在对象的枚举属性中。
+							默认为 false
+						3 value: 该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认
+							默认： undefined
+					
+						4 writable: 当且仅当该属性的 writable 键值为 true 时，属性的值，也就是上面的 value，才能被赋值运算符改变。
+							默认： false。
+  						5 存取描述符还具有以下可选键值：
+							1 get: 属性的 getter 函数，如果没有 getter，则为 undefined。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入 this 对象（由于继承关系，这里的this并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。
+默认为 undefined。
+							2 set: 属性的 setter 函数，如果没有 setter，则为 undefined。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的 this 对象。
+默认为 undefined。
+						描述符默认值汇总: 1拥有布尔值的键 configurable、enumerable 和 writable 的默认值都是 false。2 属性值和函数的键 value、get 和 set 字段的默认值为 undefined。
+						
+								
+
+					
+
+
+   
+
